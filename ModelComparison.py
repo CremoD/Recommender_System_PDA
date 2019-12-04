@@ -14,7 +14,7 @@ train, test = gl.recommender.util.random_split_by_user(ratings_df, user_id = "us
 ############## TRY COMPARISON ##############
 recommender1 = gl.recommender.create(train, user_id = "userID", item_id = "itemID", target = "rating", item_data = item_df) 
 recommender2 = gl.recommender.create(train, user_id = "userID", item_id = "itemID", target = "rating")
-recommender3 = gl.recommender.factorization_recommender.create(ratings_df, user_id = "userID", item_id = "itemID", target = "rating") 
+recommender3 = gl.recommender.factorization_recommender.create(train, user_id = "userID", item_id = "itemID", target = "rating") 
 recommender4 = gl.recommender.factorization_recommender.create(train, user_id = "userID", item_id = "itemID", target = "rating", item_data = item_df) 
 recommender5 = gl.recommender.ranking_factorization_recommender.create(train, user_id = "userID", item_id = "itemID", target = "rating") 
 recommender6 = gl.recommender.ranking_factorization_recommender.create(train, user_id = "userID", item_id = "itemID", target = "rating", item_data= item_df) 
